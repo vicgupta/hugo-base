@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft Posts on Alter Lifestyle</title>
+    <link>https://example.org/microsoft/</link>
+    <description>Recent content in Microsoft Posts on Alter Lifestyle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Sep 2023 17:00:41 -0400</lastBuildDate><atom:link href="https://example.org/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft Post 2</title>
+      <link>https://example.org/microsoft/post-2/</link>
+      <pubDate>Sun, 10 Sep 2023 20:01:30 -0400</pubDate>
+      
+      <guid>https://example.org/microsoft/post-2/</guid>
+      <description>Microsoft post 2</description>
+    </item>
+    
+  </channel>
+</rss>

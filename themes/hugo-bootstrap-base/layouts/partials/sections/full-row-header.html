@@ -1,0 +1,12 @@
+{{ if .IsHome}}
+{{ if $.Site.Params.featured_header_show }}
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+  <div class="col-md-12 px-0">
+    <h1 class="display-8">{{ $.Site.Params.featured_header_title }}</h1>
+    <p class="lead my-3">{{ $.Site.Params.featured_header_body }}</p>
+    <p class="lead mb-0"><a href="{{ $.Site.Params.featured_header_link }}" class="text-white">{{
+        $.Site.Params.featured_header_continue }}</a></p>
+  </div>
+</div>
+{{ end }}
+{{ end }}

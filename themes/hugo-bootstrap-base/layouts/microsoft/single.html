@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <p class="meta">{{.Date.Format "January 2, 2006" }}, {{.Params.categories }}</p>
+  <p class="meta">{{.Params.summary }}</p>
+  {{ if isset .Params "image" }}
+      <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      {{ else }}
+      <img src="/images/placeholder.jpg" alt="{{ .Title }}">
+      {{ end }}
+  {{ .Content }}
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}

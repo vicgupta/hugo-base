@@ -1,0 +1,18 @@
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  {{ range site.RegularPages }}
+  <div class="col">
+    <div class="card h-80">
+      {{ if isset .Params "image" }}
+      <img src="{{ .Params.image }}" class="card-img-top p-0 mb-0" alt="{{ .Title }}">
+      {{ else }}
+      <img src="/images/placeholder.jpg" class="card-img-top p-0 mb-0" alt="{{ .Title }}">
+      {{ end }}
+      
+      <div class="card-body pt-0 mt-0 mb-1">
+        <a href="{{ .RelPermalink }}" class="icon-link gap-1 icon-link-hover stretched-link"></a>
+          <h6 class="card-title mb-0">{{ .Title }}</h6>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>

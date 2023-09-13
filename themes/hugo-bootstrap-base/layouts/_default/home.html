@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{ if .IsHome }}
+    {{ with .Params.jumbotron }}
+      {{ partial "sections/jumbotron-1-1.html" .}}
+    {{ end }}
+  {{ end }}
+  {{ partial "sections/blog-1-4-cards.html" .}}
+  {{ .Content }}
+{{ end }}
