@@ -1,5 +1,5 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  {{ range site.RegularPages }}
+  {{ range first 4 site.RegularPages }}
   <div class="col">
     <div class="card h-80">
       {{ if isset .Params "image" }}

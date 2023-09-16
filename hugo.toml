@@ -1,7 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.drivewingrow.com'
 languageCode = 'en-us'
-title = 'Alter Lifestyle'
-theme = 'hugo-bootstrap-base'
+title = 'Drive Win Grow'
+theme = 'cleanpillow'
 summarylength = 10
 postsPerRow = 4
 
