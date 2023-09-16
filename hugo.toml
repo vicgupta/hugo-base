@@ -5,6 +5,8 @@ theme = 'cleanpillow'
 summarylength = 10
 postsPerRow = 4
 
+googleAnalytics = 'G-K4YTZKYRKY'
+
 [markup]
 [markup.goldmark.renderer]
 unsafe = true
