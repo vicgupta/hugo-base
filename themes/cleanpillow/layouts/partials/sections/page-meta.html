@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }}</title>
+{{ if isset .Params "metadescription" }}
+      <meta name="description" content="{{ .Params.metadescription }}" />
+      <meta property="og:description" content="{{ .Params.metadescription }}" />
+    {{ else }}
+      <meta name="description" content="{{ .Title }}">
+      <meta property="og:description" content="{{ .Title }}" />
+{{ end }}
+{{ if isset .Params "image" }}
+    <meta property="og:image" content="{{ .Params.image }}" />
+    {{ else }}
+      <meta name="description" content="/images/placeholder.jpg" />
+{{ end }}
+<meta name="author" content="Vic Gupta">
+<meta name=”robots” content="index, follow">
+<meta http-equiv="content-language" content=”en-us” />

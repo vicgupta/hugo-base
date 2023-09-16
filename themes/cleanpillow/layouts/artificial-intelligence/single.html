@@ -1,15 +1,14 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
   {{ if isset .Params "image" }}
       <img src="{{ .Params.image }}" alt="{{ .Title }}">
       {{ else }}
       <img src="/images/placeholder.jpg" alt="{{ .Title }}">
-      {{ end }}
+  {{ end }}
+
   {{ .Content }}
 
   {{ $related := (where site.RegularPages "Section" "in" "artificial-intelligence") | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
