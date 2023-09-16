@@ -11,5 +11,20 @@
       <img src="/images/placeholder.jpg" alt="{{ .Title }}">
       {{ end }}
   {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+  {{ $related := (where site.RegularPages "Section" "in" "artificial-intelligence") | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+      {{ $related = $related | shuffle | first 3 }}
+      {{ with $related }}
+        <div class="section pb-0">
+          <h2 class="h3 mb-12">{{ i18n "related_posts" }}</h2>
+          <div class="row">
+            {{ range . }}
+              <div class="lg:col-4">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
 {{ end }}
+

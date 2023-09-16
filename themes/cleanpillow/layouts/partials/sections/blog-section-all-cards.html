@@ -1,11 +1,5 @@
-{{ define "main" }}
-  {{ if .IsHome }}
-    {{ with .Params.jumbotron }}
-      {{ partial "sections/jumbotron-1-1.html" .}}
-    {{ end }}
-  {{ end }}
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    {{ range first 24 site.RegularPages }}
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {{ range site.RegularPages }}
     <div class="col">
       <div class="card h-80">
         {{ if isset .Params "image" }}
@@ -22,5 +16,3 @@
     </div>
     {{ end }}
   </div>
-  {{ .Content }}
-{{ end }}
