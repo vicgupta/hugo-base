@@ -7,6 +7,8 @@ postsPerRow = 4
 
 googleAnalytics = 'G-K4YTZKYRKY'
 
+paginate = 12
+
 [markup]
 [markup.goldmark.renderer]
 unsafe = true
