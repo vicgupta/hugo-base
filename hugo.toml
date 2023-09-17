@@ -11,9 +11,12 @@ googleAnalytics = 'G-K4YTZKYRKY'
 [markup.goldmark.renderer]
 unsafe = true
 
+[menu]
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
+pre = '<i class="fa fa-heart"></i>'
 weight = 10
 
 [[menus.main]]
